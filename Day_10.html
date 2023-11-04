@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .contaner {
+            display: flex;
+            height: 100vh;
+        }
+
+        .box {
+            height: 300px;
+            width: 200px;
+            margin: 10px;
+        }
+
+        .big {
+            width: 400px;
+
+        }
+
+        .boxinner {
+            width: 100%;
+            height: 20%;
+        }
+
+        .one {  
+            background-color: green;
+        }
+
+        .two {
+            height: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .smallbox {
+            margin: 1%;
+        }
+
+        .er {
+            width: 48%;
+            height: 46%;
+            background-color: maroon;
+        }
+        .t{
+            background-color: yellow;
+        }
+
+        .hh {
+            width: 48%;
+            height: 46%;
+        }
+
+        .lasttwo {
+            background-color: maroon;
+            height: 20%;
+            width: 100%;
+        }
+        .last{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        
+        }
+
+        .lastthree{
+            height: 78%;
+            background-color: green;
+
+        }
+        .j{
+            background-color: maroon;
+        }
+        .fg{
+            background-color: green;
+        }
+        h1{
+            font-weight: 900;
+            text-shadow: 2px 2px 2px red;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS</h1>
+    <div class="contaner">
+        <div class="box fg"></div>
+        <div class="box big">
+            <div class="boxinner one"></div>
+            <div class="boxinner two">
+                <div class="smallbox er t"></div>
+                <div class="smallbox er"></div>
+                <div class="smallbox hh j"></div>
+                <div class="smallbox hh t"></div>
+            </div>
+        </div>
+        <div class="box last">
+        <div class="lasttwo"></div>
+        <div class="lastthree"></div>
+        </div>
+    </div>
+</body>
+
+</html>
