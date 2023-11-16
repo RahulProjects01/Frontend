@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+    .container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid black; */
+        min-width: 600px;
+    }
+    .box{
+        height: 70%;
+        width: 22%;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 400px;
+        min-width: 300px;
+
+    }
+    .inner-box1{
+        height: 69%;
+        border: 2px solid grey;
+       
+    }
+    .inner-box2{
+        height: 10%;
+        border: 2px solid gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner-box3{
+        height: 18%;
+        /* border: 2px solid yellow; */
+    }
+    .logo{
+        height: 30%;
+        /* border: 2px solid olive; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form{
+        height: 40%;
+        /* border: 2px solid orchid; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+    input{
+        padding: 8px;
+        width: 80%;
+    }
+    button{
+        height: 25%;
+        width: 80%;
+        background-color: #1877f2;
+    color: #fff; 
+    border: none;
+    border-radius: 8px;
+
+    }
+    .content{
+        height: 30%;
+        /* border: 2px solid orangered; */
+        position: relative;
+        
+    }
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    .logo img{
+        height: 90%;
+        width: 40%;
+    }
+    .last1{
+        height: 30%;
+        /* border: 4px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .last2{
+        height: 70%;
+        /* border: 4px solid blue; */
+        display: flex;
+        justify-content: center;
+        padding: 9px;
+        gap: 20px;
+    }
+    .last2 img{
+        height: 100%;
+        width: 40%;
+        
+    }
+    a{
+        color: blue;
+    }
+    .element::after {
+    content: "";
+    border: 1px solid grey;
+    width: 32%;
+    top: 8%;
+    right: 10%;
+    position: absolute;
+}
+.element::before {
+    content: "";
+    border: 1px solid grey;
+    width: 32%;
+    top: 8%;
+    left: 10%;
+    position: absolute;
+}
+h5{
+   
+    text-align: center;
+    color: gray;
+}
+.con{
+    height: 33.5%;
+    /* border: 2px dotted black ; */
+
+}
+.con3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-size: 13px;
+}
+.con2{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px;
+}
+.fb1{
+    width: 6%;
+    /* border: 2px solid red; */
+    
+}
+.fb2{
+    width: 50%;
+    /* border: 2px solid blue; */
+    color: blue;
+    display: flex;
+    align-items: center;
+}
+   
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="box">
+        <img src="https://static.cdninstagram.com/images/instagram/xig/homepage/phones/home-phones.png?__makehaste_cache_breaker=HOgRclNOosk" alt="">
+    </div>
+    <div class="box">
+        <div class="inner-box1">
+            <div class="logo">
+                <img src="https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png" alt="">
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Phone number,username or email address"> 
+                <input type="password" placeholder="Password">
+                <button>Log in</button>
+            </div>
+            <div class="content">
+               <div class="con con1">
+                <span class="element"><h5>OR</h5></span>
+               </div>
+               <div class="con con2">
+                <div class="fb1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/800px-Facebook_icon_2013.svg.png" alt="">
+                </div>
+                <div class="fb2">Log in with Facebook</div>
+               </div>
+               <div class="con con3">
+                Forgotten your password?
+               </div>
+                
+                
+            </div>
+        </div>
+        <div class="inner-box2">
+            Don't have an account?
+            <a href="" >Sign up</a>
+        </div>
+        <div class="inner-box3">
+            <div class="last1">Get the app</div>
+            <div class="last2">
+                <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="">
+                <img src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png" alt="">
+            </div>
+        </div>
+    </div>
+
+   </div>
+</body>
+</html>
