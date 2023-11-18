@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .cont {
+            height: 100vh;
+            width: 100%;
+        }
+
+        nav {
+            height: 10%;
+            width: 100%;
+            border: 2px solid rgb(196, 184, 184);
+            display: flex;
+        }
+
+        .img {
+            height: 100%;
+            width: 7%;
+            margin-left: 1%;
+            display: flex;
+            /* padding: 1%; */
+        }
+
+        .textlogo {
+            height: 100%;
+            width: 20%;
+        }
+
+        .lastlogo {
+            height: 100%;
+            width: 15%;
+            margin-left: 56%;
+            display: flex;
+            justify-content: space-around;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        .logo1 {
+            height: 35%;
+            width: 20%;
+        }
+
+        .logo2 {
+
+            height: 50%;
+            width: 30%;
+        }
+
+        .img {
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+        li {
+            height: 100%;
+            width: 100%;
+            color: rgb(157, 164, 157);
+            font-size: 4pc;
+            list-style: none;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        .ll {
+            height: 50%;
+
+        }
+
+        .page {
+            height: 100%;
+            width: 100%;
+            border: 2px solid black;
+            display: flex;
+        }
+
+        .child1 {
+            height: 100%;
+            width: 22%;
+            border: 2px solid black;
+        }
+
+        .child2 {
+            height: 100%;
+            width: 78%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            border: 2px solid black;
+        }
+
+        .we {
+            height: 17%;
+            width: 100%;
+            /* border: 2px solid black; */
+        }
+
+        .wr {
+            height: 47%;
+            /* border: 2px solid black; */
+            width: 100%;
+        }
+
+        .wt {
+            height: 20%;
+            width: 100%;
+
+            /* border: 2px solid black; */
+        }
+
+        .tt {
+            height: 50%;
+            width: 100%;
+            /* border: 2px solid black; */
+            display: flex;
+        }
+
+        .to {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            /* border: 2px solid black; */
+        }
+
+        .tu {
+            display: flex;
+
+
+        }
+
+        .name {
+            /* border: 2px solid black; */
+            width: 50%;
+            height: 100%;
+            align-items: center;
+            font-size: 2pc;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-top: 5%;
+            font-weight: 550;
+            padding-left: 6%;
+
+        }
+
+        .homelogo {
+            height: 50%;
+            margin-top: 4%;
+            margin-left: 5%;
+            padding: 1%;
+            display: flex;
+
+        }
+
+        .div1 {
+            display: flex;
+        }
+
+        .calander {
+            height: 50%;
+            width: 8%;
+            margin-left: 4%;
+            margin-top: 4%;
+
+        }
+
+        .phd {
+            height: 50%;
+            width: 15%;
+            margin: 3.3%;
+        }
+
+        .hh {
+            height: 16.70%;
+            width: 100%;
+            /* border: 2px solid black; */
+        }
+
+        .div2 {
+            display: flex;
+
+        }
+
+        .notebook {
+            height: 40%;
+            width: 15%;
+            margin: 3.3%;
+
+        }
+
+        .div3 {
+            display: flex;
+        }
+
+        .front {
+            height: 60%;
+            width: 10%;
+            margin: 3.3%;
+        }
+
+        .ff {
+            border-bottom: 2px solid rgb(182, 178, 178);
+        }
+
+        .div4 {
+            display: flex;
+        }
+
+        .div5 {
+            display: flex;
+        }
+
+        .div6 {
+            display: flex;
+            border-bottom: 2px solid rgb(182, 178, 178);
+        }
+
+        .div7 {
+            display: flex;
+        }
+
+        .div8 {
+            display: flex;
+        }
+
+        .kk {
+            height: 50%;
+            width: 100%;
+            /* border: 2px solid black;  */
+        }
+
+        .div8 {
+            height: 54%;
+            width: 30%;
+            margin-top: 3%;
+            border-radius: 3%;
+            border: 2px solid black;
+
+        }
+
+        .r1 {
+            height: 35%;
+            width: 100%;
+            border: 2px solid black;
+        }
+
+        .dd {
+            flex-wrap: wrap;
+        }
+
+        .q2 {
+            height: 45%;
+            width: 100%;
+            border-radius: 4%;
+        }
+
+        .q3 {
+            height: 20%;
+            width: 100%;
+        }
+        .jj{
+            height: 100%;
+            width: 100%;
+            /* border: 2px solid black; */
+
+        }
+        .q1{
+            display: flex;
+            border-radius: 4%;
+           background-color: rgb(159, 143, 175);
+            /* background-image: url(https://th.bing.com/th/id/OIP.iiy1iO7vHv9bPdl937QvDgHaEz?rs=1&pid=ImgDetMain); */
+        }
+        .mm{
+            font-size: 3pc;
+        }
+        .mm2{
+            font-size: 35px;
+        }
+        .mm3{
+            font-size: 40px;
+        }
+        .fg
+        {
+        width: 80%;
+        padding: 3%;
+        
+        }
+        .fg2{
+            width: 20%;
+            align-items: center;
+            justify-content: center;
+            padding: 5%;
+        }
+        .fgimg{
+            height:30%;
+            align-items: center;
+            width: 80%;
+        }
+        .q3{
+            display: flex;
+            padding: 3%;
+            border-radius: 4%;
+            justify-content: space-between;
+
+        }
+        .b1{
+            height: 70%;
+            width: 15%;
+            margin-left: 60%;
+
+        }
+        .b2{
+            height: 70%;
+            width: 15%;
+            /* margin-left: 50%; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <nav>
+            <div class="img">
+                <img class="logo1 im"
+                    src="https://toppng.com/public/uploads/preview/menu-icon-png-3-lines-11552744384er3xmq5ix5.png"
+                    alt="">
+                <img class="logo2 im" src="https://th.bing.com/th/id/OIP.GxXu3wmeztllyEGrWQWoEgHaGr?rs=1&pid=ImgDetMain"
+                    alt="">
+            </div>
+            <div class="textlogo">
+                <li>Classroom</li>
+
+            </div>
+
+            <div class="lastlogo">
+                <img class="ll" src="https://th.bing.com/th/id/OIP.c-zqTRG3479A7gj7MgfT8QHaHa?rs=1&pid=ImgDetMain"
+                    alt="">
+                <img class="ll" src="https://www.forrestdebuys.com/files/45832/9-dots-smaller.png" alt="">
+                <img class="ll rr" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Picture.png" alt="">
+            </div>
+        </nav>
+
+        <div class="page">
+            <div class="child1">
+                <div class=" we">
+                    <div class="tt ">
+                        <img class="homelogo"
+                            src="https://th.bing.com/th/id/R.9f6d0b3628a2cd981639a3a27c1d868f?rik=PEZLskGrD8S5sg&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_385630.png&ehk=CiL3RmLy6%2f2o%2frw9qEaurXjp2kmgsROs%2fIht9XvHGvQ%3d&risl=&pid=ImgRaw&r=0"
+                            alt="">
+                        <div class="name">Home</div>
+                    </div>
+                    <div class="to ff">
+                        <img class="calander"
+                            src="https://th.bing.com/th/id/R.6487fd20efd271c586d9d9f7e830258a?rik=LhZeOk8Zab77eA&riu=http%3a%2f%2fclipart-library.com%2fnew_gallery%2f198-1984120_png-file-svg-blank-calendar-icon-png-transparent.png&ehk=BMOzCO02x627J9y5X6yxxsn%2bTevDDds%2fLj3DtG87iaA%3d&risl=&pid=ImgRaw&r=0"
+                            alt="">
+                        <div class="name ">Calander</div>
+                    </div>
+                </div>
+                <div class=" wr">
+                    <div class="div1 hh">
+                        <img class="phd"
+                            src="https://w7.pngwing.com/pngs/913/360/png-transparent-square-academic-cap-computer-icons-graduation-ceremony-graduation-angle-hat-rectangle.png"
+                            alt="">
+                        <div class="name">Enrolld</div>
+                    </div>
+                    <div class="div2 hh">
+                        <img class="notebook"
+                            src="https://th.bing.com/th/id/OIP.fj0FJ5QAyQNoZUBZpSqyUgHaER?rs=1&pid=ImgDetMain" alt="">
+                        <div class="name">To do</div>
+                    </div>
+                    <div class="div3 hh">
+                        <img class="front"
+                            src="https://cdn.iconscout.com/icon/premium/png-512-thumb/profile-1506810-1278719.png"
+                            alt="">
+                        <div class="name">Frontend Sessions</div>
+                    </div>
+                    <div class="div4 hh">
+                        <img class="front"
+                            src="https://cdn.iconscout.com/icon/premium/png-512-thumb/profile-1506810-1278719.png"
+                            alt="">
+                        <div class="name">SQL Sessions</div>
+                    </div>
+                    <div class="div5 hh">
+                        <img class="front"
+                            src="https://cdn.iconscout.com/icon/premium/png-512-thumb/profile-1506810-1278719.png"
+                            alt="">
+                        <div class="name">Java full Stack</div>
+                    </div>
+                    <div class="div6 hh">
+                        <img class="front"
+                            src="https://cdn.iconscout.com/icon/premium/png-512-thumb/profile-1506810-1278719.png"
+                            alt="">
+                        <div class="name">C language </div>
+                    </div>
+                </div>
+                <div class=" wt">
+                    <div class="div7 kk">
+                        <img class="front"
+                            src="https://th.bing.com/th/id/OIP.BkXndYJdgbzcfaDZDPVcOwHaHB?rs=1&pid=ImgDetMain" alt="">
+                        <div class="name">Archived classes</div>
+                    </div>
+                    <div class="div7 kk">
+                        <img class="front"
+                            src="https://img.favpng.com/12/19/9/setting-icon-png-favpng-iwLQaau1iGHCRbZn1wm0PWsce.jpg"
+                            alt="">
+                        <div class="name">Setting</div>
+                    </div>
+                </div>
+            </div>
+            <div class="child2">
+
+                <div class="div8 dd">
+                    <div class="r1 q1">
+                        <div class="jj fg">
+                            <div class="mm">Frontend Sessions</div>
+                            <div class="mm2">Batch H </div>
+                            <div class="mm3">Regex servies</div>
+                        </div>
+                        <div class="jj fg2"> 
+                            <img class="fgimg" src="https://seekicon.com/free-icon-download/three-dots-vertical_1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="r1  q2"></div>
+                    <div class="r1 q3">
+                       <img class="bb b1" src="https://w1.pngwing.com/pngs/314/924/png-transparent-person-logo-symbol-man-black-black-and-white-silhouette.png" alt="">
+                        <img class="bb b2" src="https://th.bing.com/th/id/OIP.VpGaWF3f9tSM-0J_aU8jqQHaH4?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                </div>
+                <div class="div8 dd">
+                    <div class="r1 q1">
+                        <div class="jj fg">
+                            <div class="mm">Frontend Sessions</div>
+                            <div class="mm2">Batch H </div>
+                            <div class="mm3">Regex servies</div>
+                        </div>
+                        <div class="jj fg2"> 
+                            <img class="fgimg" src="https://seekicon.com/free-icon-download/three-dots-vertical_1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="r1  q2"></div>
+                    <div class="r1 q3">
+                       <img class="bb b1" src="https://w1.pngwing.com/pngs/314/924/png-transparent-person-logo-symbol-man-black-black-and-white-silhouette.png" alt="">
+                        <img class="bb b2" src="https://th.bing.com/th/id/OIP.VpGaWF3f9tSM-0J_aU8jqQHaH4?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                </div>
+                <div class="div8 dd">
+                    <div class="r1 q1">
+                        <div class="jj fg">
+                            <div class="mm">Frontend Sessions</div>
+                            <div class="mm2">Batch H </div>
+                            <div class="mm3">Regex servies</div>
+                        </div>
+                        <div class="jj fg2"> 
+                            <img class="fgimg" src="https://seekicon.com/free-icon-download/three-dots-vertical_1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="r1  q2"></div>
+                    <div class="r1 q3">
+                       <img class="bb b1" src="https://w1.pngwing.com/pngs/314/924/png-transparent-person-logo-symbol-man-black-black-and-white-silhouette.png" alt="">
+                        <img class="bb b2" src="https://th.bing.com/th/id/OIP.VpGaWF3f9tSM-0J_aU8jqQHaH4?rs=1&pid=ImgDetMain" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
