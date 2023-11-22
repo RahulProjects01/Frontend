@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            border: 2px solid black;
+            animation-name: rahul;
+            animation-duration: 3s;
+
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rahul {
+            from {
+                width: 5px;
+                height: 5px;
+                /* margin-left: 100%; */
+                background-color: aqua;
+                border-radius: 50%;
+            }
+
+            to {
+                width: 1200px;
+                height: 1000px;
+                border-radius: 50%;
+
+                background-color: rgb(226, 25, 132);
+            }
+        }
+
+        .box2 {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            animation-name: rr;
+            animation-duration: 8s;
+            top: 0px;
+            right: 0px;
+            background-color: brown;
+        position: absolute;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rr {
+            from {
+                
+               transform: rotate(0deg);
+                top: 0px;
+                right: 0%;
+                background-color: rgb(31, 35, 35);
+            }
+
+            to {
+                transform: rotate(360deg);
+              right: 1200px;
+              top: 1100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box3"></div>
+    <div class="box2"></div>
+</body>
+
+</html>
