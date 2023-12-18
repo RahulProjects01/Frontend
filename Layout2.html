@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            min-width: 1200px;
+        }
+
+        .navbaar {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            z-index: 999;
+            min-width: 792px;
+        }
+
+        .nav-left {
+            display: flex;
+            justify-content: space-around;
+            padding: 3px;
+            margin: 2px;
+        }
+
+        .div-one {
+            font-size: 1.9rem;
+            padding: 9px 4px;
+        }
+
+        .div-two p {
+            color: rgb(200, 194, 194);
+
+        }
+
+        .div-two {
+            padding: 4px 2px 2px 2px;
+        }
+
+        .div-two h1 {
+            font-size: 1.2rem;
+        }
+
+        .div-three button {
+            background-color: rgb(6, 182, 6);
+            border: none;
+            padding: 1px 2px;
+        }
+
+        .nav-right {
+            margin: 5px 10px;
+
+        }
+
+        .nav-right button {
+            font-size: 1rem;
+            padding: 14px 18px;
+            margin: 2px 3px;
+            border-radius: 6%;
+            background-color: #3a4043;
+            color: white;
+            border: none;
+        }
+
+        #k {
+            background-color: hsl(139.41deg 58.62% 54.51%);
+        }
+
+        .home {
+            display: grid;
+            grid-template-columns: 1.05fr 5fr;
+        }
+
+        .left {
+
+            background-color: #3a4043;
+            position: relative;
+            min-width: 200px;
+
+        }
+
+        .right {
+
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+
+        }
+
+        .left-con {
+            padding-left: 15px;
+            padding-top: 23px;
+            position: fixed;
+            top: 50px;
+        }
+
+        .n {
+            margin: 15px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: white;
+
+        }
+
+        .lorem-box {
+            padding: 50px;
+            background-color: aqua;
+            min-width: 1040px;
+        }
+
+        .lorem-box h2 {
+            font-size: 2rem;
+            margin: 10px 0px;
+
+        }
+
+        .d1 {
+            background-image: linear-gradient(rgb(0, 0, 0), black, rgb(52, 50, 50), rgb(200, 195, 190));
+        }
+
+        .d2 {
+            background-color: #2a2f32;
+            color: white;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .d3 {
+            background-image: linear-gradient(rgb(20, 15, 15), rgb(0, 0, 0), rgb(21, 82, 82));
+
+        }
+
+        .d4 {
+            background-color: black;
+        }
+
+        .s {
+            color: rgb(201, 195, 195);
+        }
+
+        .inner-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+
+        }
+
+        .child-box {
+            display: grid;
+            grid-template-rows: 1fr 1fr 0.1fr;
+            margin: 10px;
+
+        }
+
+        .inner-child-box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .th {
+            display: flex;
+        }
+
+        .th img {
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            margin: 2px 10px;
+        }
+
+        .rrr {
+            margin: 8px 2px;
+        }
+
+        .inner-child-box button {
+            background-color: rgb(24, 136, 180);
+            border-radius: 30%;
+            color: white;
+            margin: 10px;
+            padding: 3px 5px;
+            border: none;
+        }
+
+        .inner-child-box h3 {
+            text-align: center;
+
+        }
+
+        .inner-child-box {
+            background-color: white;
+            align-items: end;
+
+            background-color: white;
+        }
+
+        .inner-child-box p {
+            padding: 10px;
+            font-size: small;
+        }
+
+        .logo-bar {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        }
+
+        .inner-logo-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .inner-logo-bar button {
+            font-size: 1.5rem;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 30px 0px;
+            background-color: hsl(139.41deg 58.62% 54.51%);
+            color: white;
+            border: none;
+        }
+
+        .last-logo-bar {
+            display: grid;
+            grid-template-columns: 1fr 0.7fr;
+        }
+
+        .inner-last-logo-bar {
+            background-color: #3a4043;
+            margin: 15px 0px;
+        }
+
+        .inner-last-logo-bar h5 {
+            margin: 5px;
+            font-size: 2rem;
+        }
+
+        .input-tag {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 20px;
+        }
+
+        .inner-input input {
+            background-color: #3a4043;
+            border: none;
+            margin: 4px 0px;
+            border-bottom: 2px solid #575f61;
+        }
+
+        .inner-input input::placeholder {
+            font-size: 1rem;
+            padding: 3px;
+
+        }
+
+        .sub {
+            margin: 30px 15px;
+        }
+
+        .inner-last-logo-bar button {
+            background-color: blue;
+            padding: 10px;
+            margin: 11px 20px;
+            border: none;
+            border-radius: 7%;
+            color: white;
+        }
+
+        .inner-last-logo-bar img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .home-box img {
+            padding: px;
+        }
+
+        .home-div {
+            display: flex;
+            color: rgb(181, 175, 175);
+        }
+
+        .home-div i {
+            margin: 7px 40px;
+            font-family: sans-serif;
+            font-size: 1.3rem;
+        }
+
+        .home-box button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            font-weight: bold;
+            background-color: #9f0101;
+            color: white;
+            border: none;
+            margin-top: 30px;
+        }
+
+        .home-box h6 {
+            font-size: 2rem;
+            color: rgb(176, 167, 167);
+            font-family: sans-serif;
+        }
+
+        .about-box-last {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 5px;
+        }
+
+        .about-us h1 {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .about-us h2 {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .about-us h2 i {
+            color: #f409a5;
+        }
+
+        .about-us i {
+            color: rgb(127, 102, 107);
+            text-transform: uppercasex;
+        }
+
+        .about-us button {
+            font-size: 1rem;
+            padding: 10px;
+            font-weight: bold;
+            margin: 10px 0px;
+            background-color: #f409a5;
+            border: none;
+        }
+
+        .about-box-last {
+            box-shadow: 2px 7px 10px 5px rgb(105, 95, 95);
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            .navbar {
+                position: static;
+                width: 110%;
+                /* Change position to static or relative for smaller screens */
+            }
+        }
+
+        a {
+
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbaar">
+            <div class="nav-left">
+                <div class="div-one"><i class="fa-brands fa-codepen"></i></div>
+                <div class="div-two">
+                    <p>A Pen by Adrian Gyuricska</p>
+                    <h1>Layout</h1>
+                </div>
+                <div class="div-three"><button>+ Follow</button></div>
+            </div>
+            <div class="nav-right">
+                <button class="heart b"><i class="fa-solid fa-heart"></i></button>
+                <button class="b">View Source Code</button>
+                <button class="b" id="k">Sign Up</button>
+                <button class="b">Log in</button>
+            </div>
+        </div>
+
+        <div class="home">
+            <div class="left l">
+                <div class="left-con">
+                    <a href="#home">
+                        <h1 class="n">Home</h1>
+                    </a>
+                    <a href="#about">
+                        <h1 class="n">About</h1>
+                    </a>
+                    <a href="#blog">
+                        <h1 class="n">Blog</h1>
+                    </a>
+                    <a href="#contact">
+                        <h1 class="n">Contact</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="right l" id="home">
+                <div class="lorem-box d1">
+
+                    <div class="home-box">
+                        <h6>Welcome to Home Page...</h6>
+                        <div class="home-div">
+
+                            <img src="https://th.bing.com/th/id/OIP.o2dULBmLNLT-ZH69coX5HwHaFZ?rs=1&pid=ImgDetMain"
+                                alt="">
+
+                            <i>Lorem ipsum, dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Delectus itae reprehenderit cumque cum id architecto! consectetur adipisicing
+                                elit. Cupiditate, corrupti blanditiis enim dignissimos, quaerat consectetur quidem quas
+                                ad
+                                sequi tempora quibusdam ex iusto, tempore maxime nostrum eius fuga. Sunt facere
+                                voluptatem
+                                aperiam deserunt expedita quis iusto eveniet molestiae corrupti eum?</i>
+                        </div>
+                        <button>View More</button>
+                    </div>
+                </div>
+
+                <div class="lorem-box d4" id="about">
+                    <div class="about-box-last">
+                        <div class="about-last">
+                            <img src="https://th.bing.com/th/id/OIP.C3Cph1AyNKILZCarz5yfXgHaF7?rs=1&pid=ImgDetMain"
+                                alt="">
+                        </div>
+                        <div class="about-last about-us">
+                            <h1>About Us</h1>
+                            <h2>Developer <i>& Desinger</i></h2>
+                            <i>Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quas
+                                reiciendis molestiae laudantium harum amet cumque cupiditate commodi hic, dolorum, ad
+                                ullam nemo, debitis praesentium quasi vel autem quibusdam distinctio illum neque?
+                                Dolorum possimus quos consequuntur ea quia asperiores iure. Lorem ipsum dolor, sit amet
+                                consectetur adipisicing elit. Inventore quae omnis, vitae laudantium totam quisquam
+                                repudiandae similique ut aut mollitia. amet consectetur adipisicing elit. Ipsum,
+                                accusantium distinctio. Molestiae, similique? Qui, quas. Temporibus nostrum accusamus,
+                                facilis corporis quibusdam perspiciatis ullam impedit laudantium nobis velit voluptatum
+                                distinctio minima.</i><br>
+                            <button>Let's Talk</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="lorem-box d3" id="blog">
+                    <div class="inner-box">
+                        <div class="child-box">
+                            <div class="inner-child-box"><img
+                                    src="https://www.hiboox.com/wp-content/uploads/2020/09/55c181dcd708636feecdd6d5cedfe6ce.jpg"
+                                    alt=""></div>
+                            <div class="inner-child-box">
+                                <button>Technology</button>
+                                <h3>What's New in 2022 Tech</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos architecto in
+                                    reiciendis ea eius quia reprehenderit! Ipsum tempora itaque earum.</p>
+                            </div>
+                            <div class="inner-child-box th">
+                                <div class="rrr"> <img id="img2"
+                                        src="https://w0.peakpx.com/wallpaper/107/46/HD-wallpaper-best-pose-for-profile-for-men-profile-pose-men-best-glasses.jpg"
+                                        alt="">
+
+                                </div>
+                                <div class="hhh">
+                                    <h4>jone Doe</h4>
+                                    <p>2h ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="child-box">
+                            <div class="inner-child-box"><img
+                                    src="https://th.bing.com/th/id/OIP.rvO-FyN5O8CBShQkyQmKcgHaE8?rs=1&pid=ImgDetMain"
+                                    alt=""></div>
+                            <div class="inner-child-box">
+                                <button>Technology</button>
+                                <h3>What's New in 2022 Tech</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos architecto in
+                                    reiciendis ea eius quia reprehenderit! Ipsum tempora itaque earum.</p>
+                            </div>
+                            <div class="inner-child-box th">
+                                <div class="rrr"> <img id="img2"
+                                        src="https://w0.peakpx.com/wallpaper/107/46/HD-wallpaper-best-pose-for-profile-for-men-profile-pose-men-best-glasses.jpg"
+                                        alt="">
+
+                                </div>
+                                <div class="hhh">
+                                    <h4>jone Doe</h4>
+                                    <p>2h ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="child-box">
+                            <div class="inner-child-box"><img
+                                    src="https://th.bing.com/th/id/OIP.WN9MUHttzeuIIq7Ghmm3kgHaEK?rs=1&pid=ImgDetMain"
+                                    alt=""></div>
+                            <div class="inner-child-box">
+                                <button>Technology</button>
+                                <h3>What's New in 2022 Tech</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos architecto in
+                                    reiciendis ea eius quia reprehenderit! Ipsum tempora itaque earum.</p>
+                            </div>
+                            <div class="inner-child-box th">
+                                <div class="rrr"> <img id="img2"
+                                        src="https://w0.peakpx.com/wallpaper/107/46/HD-wallpaper-best-pose-for-profile-for-men-profile-pose-men-best-glasses.jpg"
+                                        alt="">
+
+                                </div>
+                                <div class="hhh">
+                                    <h4>jone Doe</h4>
+                                    <p>2h ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lorem-box d2" id="contact">
+                    <div class="about-page">
+                        <div class="logo-bar">
+                            <div class="inner-logo-bar">
+                                <button><i class="fa-sharp fa-solid fa-location-dot"></i></button>
+                                <p><b>Address: </b> Lorem ipsum dolor sit amet consectetur </p>
+                            </div>
+                            <div class="inner-logo-bar">
+                                <button><i class="fa-solid fa-phone"></i></button>
+                                <p><b>Phone: </b>8955400022</p>
+                            </div>
+                            <div class="inner-logo-bar">
+                                <button><i class="fa-brands fa-telegram"></i></button>
+                                <p><b>Email: </b>srahulb6gmail.com</p>
+                            </div>
+                            <div class="inner-logo-bar">
+                                <button><i class="fa-sharp fa-regular fa-earth-europe"></i></button>
+                                <p><b>Website:</b> youtube.com</p>
+                            </div>
+
+                        </div>
+
+                        <div class="last-logo-bar">
+                            <div class="inner-last-logo-bar">
+                                <h5>Contect-Us</h5>
+                                <div class="input-tag">
+                                    <div class="inner-input">
+                                        <p>Full Name</p>
+                                        <input type="text" placeholder="Name" name="" id="">
+                                    </div>
+                                    <div class="inner-input">
+                                        <p>Email Address</p>
+                                        <input type="text" placeholder="Email" name="" id="">
+                                    </div>
+                                </div>
+
+                                <div class="inner-input sub">
+                                    <p>Subject</p>
+                                    <input type="text" placeholder="Subject" name="" id="">
+                                </div>
+
+                                <div class="inner-input sub">
+                                    <p>Message</p>
+                                    <input type="text" placeholder="Message" name="" id="">
+                                </div>
+
+                                <button>Send Message</button>
+                            </div>
+                            <div class="inner-last-logo-bar">
+                                <img src="https://images.alphacoders.com/302/thumb-1920-302001.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

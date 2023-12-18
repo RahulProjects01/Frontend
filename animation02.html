@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            height: 300px;
+            width: 300px;
+            border: 2px solid rgb(255, 0, 119);
+            background-color: rgb(69, 60, 60);
+            cursor: pointer;
+            transition-property: background-color,border-radius,transform;
+            transition-duration: 1s;
+            
+            
+            /* transition:  all 4s ease-in;
+            color: red; */
+        }
+        .container:hover{
+            background-color: rgb(255, 136, 0);
+            /* border-radius: 30%; */
+            cursor: pointer;
+            /* transform: rotate(5000deg); */
+            transform: scale(1.1);
+            transform: translate(200px );
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+</body>
+</html>

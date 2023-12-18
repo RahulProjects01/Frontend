@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+
+    <h1 id="h1">Hello JavaScript </h1>
+    <h2 id="time"></h2>
+    <button id="red">Red</button>
+    <button id="blue">Blue</button>
+    <button id="yellow">Yellow</button>
+    <button id="green">Green</button>
+    <button id="date">pop</button>
+    <script>
+
+        document.getElementById("red").onclick = function () {
+            document.getElementById("h1").style.color = "red";
+            document.getElementById("body").style.backgroundColor = "black";
+        }
+
+        document.getElementById("blue").onclick = function () {
+            document.getElementById("h1").style.color = "blue";
+            document.getElementById("body").style.backgroundColor = "yellow";
+        }
+
+        document.getElementById("yellow").onclick = function () {
+            document.getElementById("h1").style.color = "yellow";
+            document.getElementById("body").style.backgroundColor = "black";
+        }
+
+        document.getElementById("green").onclick = function () {
+            document.getElementById("h1").style.color = "green";
+            document.getElementById("body").style.backgroundColor = "aqua";
+        }
+
+        document.getElementById("date").onclick = function(){
+            document.getElementById("time").innerHTML = new Date();
+        }
+    </script>
+</body>
+
+</html>
