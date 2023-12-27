@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 40px;
+        }
+        input::placeholder{
+            font-size: 1.3rem;
+            padding: 2px;
+        }
+        button{
+            height: 50px;
+            width: 100px;
+        }
+        .prent{
+            display: flex;
+            margin: 2px;
+        }
+        .color{
+           width: 50px;
+           height: 50px;
+           border: 2px solid black;
+           border-radius: 50%;
+           margin: 2px;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .black{
+            background-color: black;
+        }
+
+        .last{
+            display: flex;
+            
+        }
+        .box{
+           
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            margin: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" placeholder="Enter color" id="inp">
+    <input type="number" id="val" placeholder="Input number">
+    <button id="btn">Submit</button>
+
+    <div class="prent">
+    <div class="color red" ></div>
+    <div class="color black"></div>
+    <div class="color yellow"></div>
+    <div class="color blue"></div>
+</div>
+
+
+<div class="last">
+    <div class="box" id="1">1</div>
+    <div class="box" id="2">2</div>
+    <div class="box" id="3">3</div>
+    <div class="box" id="4">4</div>
+    <div class="box" id="5">5</div>
+    <div class="box" id="6">6</div>
+    <div class="box" id="7">7</div>
+    <div class="box" id="8">8</div>
+    <div class="box" id="9">9</div>
+    <div class="box" id="10">10</div>
+</div>
+
+    <script>
+
+document.getElementById("btn").onclick = function (){
+    let color = document.getElementById("inp").value;
+    // console.log(color)
+    let val = document.getElementById("val").value;
+    // console.log(val)
+    let box = document.querySelectorAll(".box");
+    // console.log(box)
+    for(let i of box){
+        if(i.id == val){
+            console.log(i);
+            i.style.backgroundColor = color;
+        }
+    }
+  
+     
+
+
+    
+}
+    </script>
+</body>
+</html>

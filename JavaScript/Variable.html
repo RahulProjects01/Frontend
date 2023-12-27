@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="input">
+    <button id="btn">Submit</button>
+    <!-- <input type="password" name="" id=""> -->
+    <script>
+        // var id = 5;
+        // var id = 10;
+        // console.log(id);
+
+        //  ishko Redecalere kar sakte hai 
+        //  ishko Reassine kar sakte hai
+        //  glabal varible
+        // hosting vatiable-->{ 
+        // console.log(b = 80);
+        // var b;
+        // console.log(name);
+        // var name = 100;
+        // }
+
+
+        // let no = 65;
+        // console.log(no);
+        // Redecalere nhi kar sakte,
+        //  ishko Reassine kar sakte hai
+        // local varible
+        // Not Hosting varible 
+
+        // const digit = 334;
+        // console.log(digit);{
+        //  ishko Redecalere nhi kar sakte hai
+        //  ishko Reassine nhi kar sakte hai
+        // local variable 
+        // }
+
+
+        // is function ko ham function ke upar bhi use kar sakte hai
+        // add()
+        // function add() {
+        //     document.write("hello Word");
+        // }
+
+
+
+        // console.log(name);
+        // var name = 200;
+
+
+        // var a = 90;
+        // var b = 90;
+        // var c = 70;
+        // var d = 140;
+
+        // // Find the maximum value
+        // var max = Math.max(a, b, c, d);
+
+        // console.log("The maximum value is: " + max);
+
+
+        //     var a = 20;
+        //    b =  a % 2 == 0 ? "even" : "odd";
+        //     document.write(b);
+
+
+        // let  a = 1;
+
+        // switch (a) {
+        //     case 1:{
+        //         document.write("mon-- >");
+        //         a%2==0 ?document.write("even"): document.write("odd");
+        //         break;
+        //     }
+        //      case 2: {
+        //         document.write("tue-- >");
+        //          a % 2 == 0 ? document.write("even") : document.write("odd");
+        //         break;
+        //     }
+
+        //      case 3: {
+        //         document.write("wed-- >");
+        //          a % 2 == 0 ? document.write("even") : document.write("odd");
+        //         break;
+        //     }
+
+
+        //      case 4: {
+        //         document.write("thu-- >");
+        //          a % 2 == 0 ? document.write("even") : document.write("odd");
+        //         break;
+        //     }
+        //     default:
+        //         document.write("Wrong input");
+
+        //         break;
+        // }
+
+
+
+
+
+        document.getElementById("btn").onclick = function () {
+
+            let name = document.getElementById("input").value;
+            if (name >= 'a' && name <= 'z' || name >= 'A' && name <= 'Z') {
+                console.log("cheractor");
+            }
+            else if (name >= 0) {
+                console.log("Number");  
+            }
+            else {
+                console.log("Specil charcter");
+            }
+        }
+    </script>
+</body>
+
+</html>

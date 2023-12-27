@@ -11,11 +11,12 @@
 
     <h1 id="h1">Hello JavaScript </h1>
     <h2 id="time"></h2>
+    <h2 id="pop"></h2>
     <button id="red">Red</button>
     <button id="blue">Blue</button>
     <button id="yellow">Yellow</button>
     <button id="green">Green</button>
-    <button id="date">pop</button>
+    <button id="pop">pop</button>
     <script>
 
         document.getElementById("red").onclick = function () {
@@ -40,6 +41,10 @@
 
         document.getElementById("date").onclick = function(){
             document.getElementById("time").innerHTML = new Date();
+        }
+
+        document.getElementById("pop").onclick = function (){
+            alert("this is pop box").o
         }
     </script>
 </body>

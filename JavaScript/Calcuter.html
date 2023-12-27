@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border: none;
+
+        }
+
+        body {
+            background-color: rgba(48, 71, 80, 0.519);
+        }
+
+        .pro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+
+        }
+
+        .calcuter {
+            background-color: rgb(73, 70, 70);
+            border: 2px solid black;
+            box-shadow: 2px 5px 10px 5px rgb(0, 0, 0);
+        }
+
+        button {
+            margin: 12px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        .btn {
+            text-align: center;
+            font-size: medium;
+            color: white;
+            background-color: black;
+            border: none;
+            border-radius: 8%;
+            box-shadow: 2px 5px 10px 5px rgb(0, 0, 0);
+        }
+
+        .btn:hover {
+            box-shadow: 2px 5px 10px 5px rgb(102, 102, 102);
+            cursor: po;
+        }
+
+        .input {
+            margin: 3px;
+            border: none;
+        }
+
+        input {
+            padding: 25px;
+            width: 100%;
+            font-size: 1.5rem;
+            background-color: rgba(60, 111, 93, 0.785);
+            border: none;
+            color: white;
+        }
+
+        input::placeholder {
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pro">
+        <div class="calcuter">
+            <div class="input">
+                <input  type="text" name="" id="input">
+            </div>
+
+            <div class="Button">
+                <div class="btn-1">
+                    <button class="btn">(</button>
+                    <button class="btn">)</button>
+                    <button class="btn">C</button>
+                    <button class="btn">❌</button>
+                </div>
+
+                <div>
+                    <button class="btn">7</button>
+                    <button class="btn">8</button>
+                    <button class="btn">9</button>
+                    <button class="btn">%</button>
+                </div>
+                <div>
+                    <button class="btn">4</button>
+                    <button class="btn">5</button>
+                    <button class="btn">6</button>
+                    <button class="btn">*</button>
+                </div>
+                <div>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn">-</button>
+                </div>
+                <div>
+                    <button class="btn">0</button>
+                    <button class="btn">.</button>
+                    <button class="btn">=</button>
+                    <button class="btn">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let a = document.querySelectorAll(".btn");
+        console.log(a);
+        for (let i of a) {
+            i.onclick = function () {
+                
+
+                if(i.innerText=="="){
+                    let digit = document.querySelector("#input").value;
+                    document.querySelector("#input").value = eval(digit);
+                }
+                else if(i.innerText == "C"){
+                    document.querySelector("#input").value = ""
+                }
+
+                 else if (i.innerText == "❌") {
+                    let val = document.querySelector("#input").value;
+                    document.querySelector("#input").value = val.slice(0, -1);
+                }
+                else{
+                    document.querySelector("#input").value += i.innerText;
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
