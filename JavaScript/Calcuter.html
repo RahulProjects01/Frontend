@@ -80,7 +80,7 @@
     <div class="pro">
         <div class="calcuter">
             <div class="input">
-                <input  type="text" name="" id="input">
+                <input type="text" name="" id="input">
             </div>
 
             <div class="Button">
@@ -121,28 +121,24 @@
 
     <script>
         let a = document.querySelectorAll(".btn");
-        console.log(a);
         for (let i of a) {
             i.onclick = function () {
-                
-
-                if(i.innerText=="="){
+                if (i.innerText == "=") {
                     let digit = document.querySelector("#input").value;
                     document.querySelector("#input").value = eval(digit);
-                }
-                else if(i.innerText == "C"){
+                } 
+                else if (i.innerText == "C") {
                     document.querySelector("#input").value = ""
                 }
 
-                 else if (i.innerText == "❌") {
+                else if (i.innerText == "❌") {
                     let val = document.querySelector("#input").value;
                     document.querySelector("#input").value = val.slice(0, -1);
                 }
-                else{
+                else {
                     document.querySelector("#input").value += i.innerText;
                 }
             }
-
         }
     </script>
 </body>

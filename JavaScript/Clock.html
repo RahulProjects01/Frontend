@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(94, 90, 90);
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            margin-top: 20%;
+        }
+
+        .main div {
+            font-size: 5rem;
+        }
+
+        button {
+            padding-left: 30px;
+            padding-right: 30px;
+            margin: 20px;
+            font-size: 2rem;
+            color: white;
+            font-family: serif;
+            background-color: rgb(175, 13, 13);
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="hour">
+            <p id="h">00</p>
+        </div>
+        <div>
+            <p>:</p>
+        </div>
+        <div id="minute">
+            <p id="m">00</p>
+        </div>
+        <div>
+            <p>:</p>
+        </div>
+        <div id="second">
+            <p id="s">00</p>
+        </div>
+    </div>
+
+
+    <script>
+        function display() {
+            let hour = document.querySelector("#hour");
+            let minute = document.querySelector("#minute");
+            let second = document.querySelector("#second");
+
+            let d = new Date();
+            hour = d.getHours();
+            document.querySelector("#h").innerHTML = hour;
+            console.log(hour);
+
+            minute = d.getMinutes();
+            document.querySelector("#m").innerHTML = minute;
+            console.log(minute);
+
+            second = d.getSeconds();
+            document.querySelector("#s").innerHTML = second;
+            console.log(second);
+            // document.location.reload();
+        }
+        setInterval(display);
+    </script>
+</body>
+
+</html>
