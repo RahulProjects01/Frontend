@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="input">
+    <button id="button">Submit</button><br>
+    <button id="even">even</button><br>
+    <button id="odd">odd</button><br>
+    <button id="print">Print</button><br>
+    <button id="revarce">Revarce</button>
+    <h1 id="e"></h1><br>
+    <h1 id="o"></h1><br>
+<h1 id="p"></h1>
+<h1 id="re"></h1>
+    <script>
+        // push
+        // pop
+        // shift
+        // unshift
+        // 
+        // ye ek call back function hota hai and ye high order function hota hai
+        // let a = [10,"rahul",-33,40,"string",60,-70,80];
+        // let b= a.map(function(item){
+        //     if(item >= 0){
+        //        return "positive";
+        //     }
+        //     else if(item >= "a" && item <= "z" || item >= "A" && item <= "Z"){
+        //         return "String";
+        //     } 
+        //     else if(item < 0){
+        //         return "Nagtive";
+        //     }
+
+        //     else {
+        //         return "nagtive";
+        //     }
+        // })
+        // console.log(b);
+
+
+
+
+        //  filter ye hmara vhi data filter karke deta hai ju=itna hamne filter kiya hai
+        //  ishme do peramitar de sakte hai pahle vala value or dushra indexing.
+
+
+        // let a = [10,20,40,303,4440,3933,54,"fds","redfds"];
+        // let b = a.filter((item) =>{
+        //     if(item % 2 == 0){
+        //         return "even"
+        //     }
+        //     else{
+        //         "odd"
+        //     }
+        //     return item > 50;
+        // })
+        // console.log(b);
+
+
+        // reduce ye apne array me se value ko add , mul , dev , karke deta hai 
+
+        // let a = [10, 20, 40, 303, 4440, 3933, 54];
+        // let max = 0;
+        //     let b = a.reduce((x,y) =>{
+
+        //         if(x>y){
+        //             return x;
+        //         }
+        //         else{
+        //             return y;
+        //         }
+
+        //     })
+        //     console.log(b);
+
+
+
+
+        //  let a = "10, 20, 30, 40, 50,60,70,80,90,100"; 
+        // console.log(a.slice(0,-1)); ye value ko cut karta hai 
+        //  console.log(a.slice(0, -1));
+        //   console.log(a.slice(0, -3));
+        //    console.log(a.slice(-4, -2));
+
+
+        // a.splice(2,3,"Ram" ); 
+        //   a.splice(2, 3, "Ram","fdsjjj"); 
+        //    a.splice(-4,1, "Ram", "fdsjjj"); 
+        // a.splice(0,5); 
+
+
+        // work only on string
+        // array to string use join method
+        // string to array use splite 
+        //    a =  a.split(",")
+        //      console.log(a);
+
+
+        //  let a = "mohit-ajay-ankit-vaibhav-jdjhhd-jndbhd";
+        //  let b = a.split("-"); // ise ham target    
+        //  console.log(b);
+        //  console.log(b.join(","));
+
+        let a = [];
+        let b = [];
+        let btn = document.querySelector("#button");
+        btn.addEventListener("click", function () {
+            let c = document.querySelector("input").value;
+            document.querySelector("input").value="";
+            document.querySelector("input").focus();
+            console.log(c);
+
+            document.querySelector("#print").onclick = function(){
+                document.querySelector("#p").innerHTML = a ,b;
+            };
+                
+            
+
+            if (c % 2 == 0) {
+                a.push(c);
+                console.log("even: " + a);
+            }
+            else {
+                b.push(c);
+                console.log("odd: " + b);
+            }
+
+            document.querySelector("#even").onclick = function () {
+               let re =  a.pop();
+                document.querySelector("#e").innerHTML = a.join(" ");
+            }
+
+
+            document.querySelector("#odd").onclick = function () {
+               let ru =  b.pop();
+                document.querySelector("#o").innerHTML = b.join(" ");
+            }
+
+
+            document.querySelector("#revarce").onclick = function(){
+                document.querySelector("#re").innerHTML = re.unshift();
+                // document.querySelector("#re").innerHTML = ru.unshift();
+            }
+
+        })
+    </script>
+</body>
+
+</html>
