@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey App</title>
+    <style>
+        body {
+            font-family:  sans-serif;
+            background-color:rgb(73, 67, 67);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        
+        }
+
+        #survey-container {
+            background-color: #1d3f4c;
+            padding: 20px;
+            color: white;
+
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 10px 5px 40px 10px  rgb(238, 30, 30);
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="survey-container">
+        <h1>Survey App</h1>
+        <form id="survey-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <label for="q1">What is your favorite color?</label>
+                <select id="q1" name="question1">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <label for="q2">How often do you exercise?</label>
+                <input type="radio" id="q2-1" name="question2" value="daily">
+                <label for="q2-1">Daily</label>
+                <input type="radio" id="q2-2" name="question2" value="weekly">
+                <label for="q2-2">Weekly</label>
+                <input type="radio" id="q2-3" name="question2" value="monthly">
+                <label for="q2-3">Monthly</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <label for="q3">Comments:</label>
+                <textarea id="q3" name="question3" rows="4" cols="50"></textarea>
+            </div>
+
+            <button type="button" onclick="submitSurvey()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitSurvey() {
+            const formData = {};
+            const form = document.getElementById('survey-form');
+
+            for (let i = 0; i < form.elements.length; i++) {
+                const element = form.elements[i];
+
+                if (element.type !== 'button') {
+                    formData[element.name] = element.type === 'radio' ? getRadioValue(element.name) : element.value;
+                }
+            }
+
+            alert('Survey submitted!\n\n' + JSON.stringify(formData, null, 2));
+        }
+
+        function getRadioValue(name) {
+            const radioGroup = document.getElementsByName(name);
+            for (let i = 0; i < radioGroup.length; i++) {
+                if (radioGroup[i].checked) {
+                    return radioGroup[i].value;
+                }
+            }
+            return null;
+        }
+
+    </script>
+</body>
+
+</html>
