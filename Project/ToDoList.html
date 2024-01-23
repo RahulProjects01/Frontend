@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+       div{
+        margin-left: 10px;
+       }
+        
+        div input{
+            height: 30px;
+            width: 400px;
+        }
+        #btn{
+            margin: 4px;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="div">
+        <h1>To Do List</h1>
+        <input type="text" name="" id="inp">
+        <button id="btn">ADD</button>
+
+       
+    </div>
+
+    <div id="lunch-div">
+        <h2 id="lunch"></h2>
+        <button id="Complete-button"></button>
+        <button id="Delete-button"></button>
+    </div>
+
+    <div id="Reading-div">
+        <h2 id="Reading"></h2>
+        <button id="Complete-button1"></button>
+        <button id="Delete-button2"></button>
+    </div>
+
+    <div id="Dinner-div">
+        <h2 id="Dinner"></h2>
+        <button id="Complete-button3"></button>
+        <button id="Delete-button4"></button>
+    </div>
+
+    <div id="Dance-div">
+        <h2 id="Dance"></h2>
+        <button id="Complete-button5"></button>
+        <button id="Delete-button6"></button>
+    </div>
+
+<script>
+ 
+    
+    document.querySelector("#btn").onclick = function(){
+           let input = document.querySelector("#inp").value;
+           if(input == "Lunch"){
+             document.querySelector("#lunch").innerHTML = "Lunch";
+           let butttonC =  document.querySelector("#Complete-button").innerHTML = "Complete-Button";
+           let buttonD = document.querySelector("#Delete-button").innerHTML = "Delete-Button";
+             butttonC.onclick = function(){
+                document.querySelector("#lunch").innerHTML = "Complete";
+             }
+           }
+
+           else if(input == "Reading"){
+             document.querySelector("#Reading").innerHTML = "Reading";
+               let butttonC = document.querySelector("#Complete-button1").innerHTML = "Complete-Button";
+               let buttonD = document.querySelector("#Delete-button2").innerHTML = "Delete-Button";
+               butttonC.onclick = function () {
+                   document.querySelector("#Reading").innerHTML = "Complete";
+               }
+           }
+           else if (input == "Dinner") {
+               document.querySelector("#Dinner").innerHTML = "Dinner";
+               let butttonC = document.querySelector("#Complete-button3").innerHTML = "Complete-Button";
+               let buttonD = document.querySelector("#Delete-button4").innerHTML = "Delete-Button";
+               butttonC.onclick = function () {
+                   document.querySelector("#Dinner").innerHTML = "Complete";
+               }
+           }
+           else if (input == "Dance") {
+               document.querySelector("#Dance").innerHTML = "Dance";
+               let butttonC = document.querySelector("#Complete-button5").innerHTML = "Complete-Button";
+               let buttonD = document.querySelector("#Delete-button6").innerHTML = "Delete-Button";
+               butttonC.onclick = function () {
+                   document.querySelector("#Reading").innerHTML = "Complete";
+               }
+           }
+           else{
+            document.write("wrong input");
+           }
+
+    };
+</script>
+</body>
+</html>
